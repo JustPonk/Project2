@@ -839,31 +839,41 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+
+
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let sections = document.querySelectorAll(".container-fluid"); // Selecciona todas las secciones principales
             let currentSectionIndex = 0;
             let isScrolling = false;
+            let scrollingCompleted = false; // Bandera para desactivar la función después de un recorrido completo
     
             window.addEventListener("wheel", function (event) {
-                if (isScrolling) return; // Evita múltiples activaciones en un solo scroll
+                if (isScrolling || scrollingCompleted || event.deltaY <= 0) return; // Solo activa cuando el usuario baja
     
                 isScrolling = true;
                 setTimeout(() => isScrolling = false, 800); // Tiempo de espera para evitar activaciones múltiples
     
-                if (event.deltaY > 0) {
-                    // Scroll hacia abajo
-                    currentSectionIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
-                } else {
-                    // Scroll hacia arriba
-                    currentSectionIndex = Math.max(currentSectionIndex - 1, 0);
-                }
-    
+                // Scroll hacia abajo
+                currentSectionIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
                 sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+    
+                // Si llegamos a la última sección, desactivamos la funcionalidad
+                if (currentSectionIndex === sections.length - 1) {
+                    scrollingCompleted = true;
+                }
             });
         });
     </script>
-    
+        
+
+
+
+
+
+
 </body>
 
 </html>
