@@ -842,30 +842,42 @@
 
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let sections = document.querySelectorAll(".container-fluid"); // Selecciona todas las secciones principales
-            let currentSectionIndex = 0;
-            let isScrolling = false;
-            let scrollingCompleted = false; // Bandera para desactivar la función después de un recorrido completo
-    
-            window.addEventListener("wheel", function (event) {
-                if (isScrolling || scrollingCompleted || event.deltaY <= 0) return; // Solo activa cuando el usuario baja
-    
-                isScrolling = true;
-                setTimeout(() => isScrolling = false, 800); // Tiempo de espera para evitar activaciones múltiples
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let sections = document.querySelectorAll(".container-fluid"); // Selecciona todas las secciones principales
+        let currentSectionIndex = 0;
+        let maxVisitedIndex = 0; // Guarda la sección más lejana a la que llegaste
+        let isScrolling = false;
+        let scrollingCompleted = false; // Para desactivar la funcionalidad después de un recorrido completo
+
+        window.addEventListener("wheel", function (event) {
+            if (isScrolling || scrollingCompleted) return;
+
+            isScrolling = true;
+            setTimeout(() => isScrolling = false, 800); // Previene activaciones múltiples seguidas
+
+            if (event.deltaY > 0) {
                 // Scroll hacia abajo
-                currentSectionIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
-                sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
-    
-                // Si llegamos a la última sección, desactivamos la funcionalidad
-                if (currentSectionIndex === sections.length - 1) {
-                    scrollingCompleted = true;
+                if (currentSectionIndex < maxVisitedIndex) {
+                    currentSectionIndex++; // Solo avanza normalmente hasta donde ya has llegado
+                } else {
+                    currentSectionIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
                 }
-            });
+                maxVisitedIndex = Math.max(maxVisitedIndex, currentSectionIndex);
+            } else {
+                // Scroll hacia arriba
+                currentSectionIndex = Math.max(currentSectionIndex - 1, 0);
+            }
+
+            sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+
+            // Desactiva la funcionalidad si ya llegaste a la última sección
+            if (currentSectionIndex === sections.length - 1) {
+                scrollingCompleted = true;
+            }
         });
-    </script>
+    });
+</script>
     
 
 
