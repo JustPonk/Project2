@@ -840,49 +840,167 @@
     <script src="js/main.js"></script>
 
 
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let sections = document.querySelectorAll(".container-fluid"); // Selecciona todas las secciones principales
-        let currentSectionIndex = 0;
-        let maxVisitedIndex = 0; // Guarda la sección más lejana a la que llegaste
-        let isScrolling = false;
-        let scrollingCompleted = false; // Para desactivar la funcionalidad después de un recorrido completo
-
-        window.addEventListener("wheel", function (event) {
-            if (isScrolling || scrollingCompleted) return;
-
-            isScrolling = true;
-            setTimeout(() => isScrolling = false, 800); // Previene activaciones múltiples seguidas
-
-            if (event.deltaY > 0) {
-                // Scroll hacia abajo
-                if (currentSectionIndex < maxVisitedIndex) {
-                    currentSectionIndex++; // Solo avanza normalmente hasta donde ya has llegado
-                } else {
-                    currentSectionIndex = Math.min(currentSectionIndex + 1, sections.length - 1);
-                }
-                maxVisitedIndex = Math.max(maxVisitedIndex, currentSectionIndex);
-            } else {
-                // Scroll hacia arriba
-                currentSectionIndex = Math.max(currentSectionIndex - 1, 0);
-            }
-
-            sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
-
-            // Desactiva la funcionalidad si ya llegaste a la última sección
-            if (currentSectionIndex === sections.length - 1) {
-                scrollingCompleted = true;
-            }
-        });
-    });
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let sections = document.querySelectorAll(".container-fluid"); // Secciones principales
+            let currentSectionIndex = 0;
+            let isScrolling = false;
+            let scrollingCompleted = false; // Bandera para desactivar la función tras el primer recorrido completo
     
+            window.addEventListener("wheel", function (event) {
+                if (isScrolling || scrollingCompleted || event.deltaY <= 0) return; // Solo activa cuando el usuario baja
+    
+                isScrolling = true;
+                setTimeout(() => isScrolling = false, 800); // Evita múltiples activaciones
+    
+                // Scroll hacia abajo
+                if (currentSectionIndex < sections.length - 1) {
+                    currentSectionIndex++;
+                    sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+                }
+    
+                // Si el usuario ha llegado a la última sección, desactiva la función
+                if (currentSectionIndex === sections.length - 1) {
+                    scrollingCompleted = true;
+                }
+            });
+        });
+    </script>
+        
 
 
 
+        <style>
+            /* Topbar con fondo azul oscuro */
+            .container-fluid.bg-light {
+                background: #0d47a1 !important; /* Azul oscuro */
+            }
+        
+            .container-fluid.bg-light .text-left small, 
+            .container-fluid.bg-light .text-right small {
+                color: #ffffff;
+            }
+        
+            /* Navbar con un toque azul claro */
+            .navbar {
+                background-color: #1976d2; /* Azul claro */
+            }
+        
+            /* Cambio de color a blanco para los íconos de las redes sociales */
+            .navbar .text-primary {
+                color: #ffffff !important;
+            }
+        
+            /* Botón "Iniciar Chat" con color azul oscuro */
+            .btn-primary {
+                background-color: #0d47a1;
+                border-color: #0d47a1;
+            }
+        
+            .btn-primary:hover {
+                background-color: #1565c0;
+                border-color: #1565c0;
+            }
+        
+            /* Fondo de los slides del carousel con tonos azules */
+            .carousel-item {
+                background: linear-gradient(135deg, rgba(13, 71, 161, 0.7), rgba(25, 118, 210, 0.7));
+            }
+        
+            /* Estilo del texto en los slides */
+            .carousel-caption h3 {
+                color: #ffffff;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            }
+        
+            .carousel-caption p {
+                color: #e1f5fe; /* Color azul muy suave para el texto */
+            }
+        
+            .carousel-caption a {
+                background-color: #0d47a1;
+                border-color: #0d47a1;
+            }
+        
+            .carousel-caption a:hover {
+                background-color: #1565c0;
+                border-color: #1565c0;
+            }
 
+
+            /* Fondo azulado para la sección About */
+    .container-fluid.py-5 {
+        background-color: #5c9c9f; /* Fondo con un azul suave */
+    }
+
+    /* Estilo de los textos de la sección About */
+    .animate-text h6 {
+        background-color: #1976d2; /* Azul claro */
+        color: white;
+    }
+
+    .animate-text h1 {
+        color: white; /* Títulos en blanco */
+    }
+
+    .animate-text p {
+        color: white; /* Texto de párrafos en blanco */
+    }
+
+    .animate-text .border-left {
+        border-left: 3px solid #1976d2; /* Borde izquierdo azul */
+    }
+
+    .animate-text .text-primary {
+        color: #1976d2; /* Color azul claro para los contadores */
+    }
+
+    /* Fondo azulado para la sección Service */
+    .container-fluid.px-0.py-5.my-5 {
+        background-color: #5c9c9f; /* Fondo con un azul suave */
+    }
+
+    /* Títulos de la sección Service */
+    .service-item .service-text h4 {
+        color: white; /* Títulos de los servicios en blanco */
+    }
+
+    /* Texto de los párrafos en la sección Service */
+    .service-item .service-text p {
+        color: white; /* Texto de los párrafos en blanco */
+    }
+
+    /* Botones en la sección Service */
+    .service-item .service-text .btn-primary {
+        background-color: #0d47a1; /* Azul oscuro para los botones */
+        border-color: #0d47a1;
+    }
+
+    .service-item .service-text .btn-primary:hover {
+        background-color: #1565c0;
+        border-color: #1565c0;
+    }
+
+    /* Fondo de la sección de "Solicitar Soporte" en Service */
+    .bg-appointment {
+        background-color: #1976d2; /* Azul claro para el fondo */
+    }
+
+    /* Estilo de los botones en "Solicitar Soporte" */
+    .bg-appointment .btn-primary {
+        background-color: #0d47a1;
+        border-color: #0d47a1;
+    }
+
+    .bg-appointment .btn-primary:hover {
+        background-color: #1565c0;
+        border-color: #1565c0;
+    }
+
+
+    
+        </style>
+        
 
 
 </body>
