@@ -28,6 +28,7 @@
 
 <!-- AOS Animation Library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 
 
@@ -493,27 +494,26 @@
 
 
 
-
 <!-- Open Hours Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src="img/opening.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/opening.jpg" style="object-fit: cover;" data-aos="fade-right" data-aos-duration="1000">
                 </div>
             </div>
             <div class="col-lg-6 pt-5 pb-lg-5">
-                <div class="hours-text bg-light p-4 p-lg-5 my-lg-5">
-                    <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">Horario del Chat</h6>
-                    <h1 class="mb-4">Estamos aquí para ayudarte</h1>
-                    <p>Nuestro chat de soporte está disponible para resolver tus dudas y asistirte en tiempo real. Escríbenos durante nuestro horario de atención y uno de nuestros agentes te ayudará.</p>
+                <div class="hours-text bg-light p-4 p-lg-5 my-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2" data-aos="zoom-in" data-aos-delay="300">Horario del Chat</h6>
+                    <h1 class="mb-4" data-aos="fade-up" data-aos-delay="500">Estamos aquí para ayudarte</h1>
+                    <p data-aos="fade-up" data-aos-delay="700">Nuestro chat de soporte está disponible para resolver tus dudas y asistirte en tiempo real. Escríbenos durante nuestro horario de atención y uno de nuestros agentes te ayudará.</p>
                     <ul class="list-inline">
-                        <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Lunes – Viernes : 9:00 AM - 7:00 PM</li>
-                        <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Sábado : 9:00 AM - 6:00 PM</li>
-                        <li class="h6 py-1"><i class="far fa-circle text-primary mr-3"></i>Domingo : Cerrado</li>
+                        <li class="h6 py-1" data-aos="fade-up" data-aos-delay="900"><i class="far fa-circle text-primary mr-3"></i>Lunes – Viernes : 9:00 AM - 7:00 PM</li>
+                        <li class="h6 py-1" data-aos="fade-up" data-aos-delay="1000"><i class="far fa-circle text-primary mr-3"></i>Sábado : 9:00 AM - 6:00 PM</li>
+                        <li class="h6 py-1" data-aos="fade-up" data-aos-delay="1100"><i class="far fa-circle text-primary mr-3"></i>Domingo : Cerrado</li>
                     </ul>
-                    <a href="" class="btn btn-primary mt-2">Abrir Chat</a>
+                    <a href="" class="btn btn-primary mt-2" data-aos="zoom-in" data-aos-delay="1300">Abrir Chat</a>
                 </div>
             </div>
         </div>
@@ -521,25 +521,28 @@
 </div>
 <!-- Open Hours End -->
 
+<script>
+    AOS.init();
+</script>
+
 
 
 
 
     
-
-    <!-- Pricing Start -->
+<!-- Pricing Start -->
 <div class="container-fluid bg-pricing" style="margin: 90px 0;">
     <div class="container">
         <div class="row">
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src="img/pricing.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="img/pricing.jpg" style="object-fit: cover;" data-aos="fade-right" data-aos-duration="1000">
                 </div>
             </div>
             <div class="col-lg-7 pt-5 pb-lg-5">
-                <div class="pricing-text bg-light p-4 p-lg-5 my-lg-5">
+                <div class="pricing-text bg-light p-4 p-lg-5 my-lg-5" data-aos="fade-left" data-aos-duration="1000">
                     <div class="owl-carousel pricing-carousel">
-                        <div class="bg-white">
+                        <div class="bg-white" data-aos="flip-left" data-aos-duration="1200">
                             <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
                                 <h1 class="display-4 mb-0">
                                     <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>19<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mes</small>
@@ -547,14 +550,14 @@
                                 <h5 class="text-primary text-uppercase m-0">Plan Básico</h5>
                             </div>
                             <div class="p-4">
-                                <p><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 8/5</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta estándar</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Acceso a preguntas frecuentes</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Historial de consultas limitado</p>
-                                <a href="" class="btn btn-primary my-2">Elegir Plan</a>
+                                <p data-aos="fade-up" data-aos-delay="200"><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 8/5</p>
+                                <p data-aos="fade-up" data-aos-delay="300"><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta estándar</p>
+                                <p data-aos="fade-up" data-aos-delay="400"><i class="fa fa-check text-success mr-2"></i>Acceso a preguntas frecuentes</p>
+                                <p data-aos="fade-up" data-aos-delay="500"><i class="fa fa-check text-success mr-2"></i>Historial de consultas limitado</p>
+                                <a href="" class="btn btn-primary my-2" data-aos="zoom-in" data-aos-delay="600">Elegir Plan</a>
                             </div>
                         </div>
-                        <div class="bg-white">
+                        <div class="bg-white" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="300">
                             <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
                                 <h1 class="display-4 mb-0">
                                     <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>39<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mes</small>
@@ -562,14 +565,14 @@
                                 <h5 class="text-primary text-uppercase m-0">Plan Profesional</h5>
                             </div>
                             <div class="p-4">
-                                <p><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 24/5</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta prioritario</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Soporte técnico avanzado</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Historial de consultas ilimitado</p>
-                                <a href="" class="btn btn-primary my-2">Elegir Plan</a>
+                                <p data-aos="fade-up" data-aos-delay="200"><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 24/5</p>
+                                <p data-aos="fade-up" data-aos-delay="300"><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta prioritario</p>
+                                <p data-aos="fade-up" data-aos-delay="400"><i class="fa fa-check text-success mr-2"></i>Soporte técnico avanzado</p>
+                                <p data-aos="fade-up" data-aos-delay="500"><i class="fa fa-check text-success mr-2"></i>Historial de consultas ilimitado</p>
+                                <a href="" class="btn btn-primary my-2" data-aos="zoom-in" data-aos-delay="600">Elegir Plan</a>
                             </div>
                         </div>
-                        <div class="bg-white">
+                        <div class="bg-white" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="600">
                             <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
                                 <h1 class="display-4 mb-0">
                                     <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>79<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mes</small>
@@ -577,11 +580,11 @@
                                 <h5 class="text-primary text-uppercase m-0">Plan Empresarial</h5>
                             </div>
                             <div class="p-4">
-                                <p><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 24/7</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Agente de soporte dedicado</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta ultrarrápido</p>
-                                <p><i class="fa fa-check text-success mr-2"></i>Integración con herramientas empresariales</p>
-                                <a href="" class="btn btn-primary my-2">Elegir Plan</a>
+                                <p data-aos="fade-up" data-aos-delay="200"><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 24/7</p>
+                                <p data-aos="fade-up" data-aos-delay="300"><i class="fa fa-check text-success mr-2"></i>Agente de soporte dedicado</p>
+                                <p data-aos="fade-up" data-aos-delay="400"><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta ultrarrápido</p>
+                                <p data-aos="fade-up" data-aos-delay="500"><i class="fa fa-check text-success mr-2"></i>Integración con herramientas empresariales</p>
+                                <a href="" class="btn btn-primary my-2" data-aos="zoom-in" data-aos-delay="600">Elegir Plan</a>
                             </div>
                         </div>
                     </div>
@@ -592,6 +595,9 @@
 </div>
 <!-- Pricing End -->
 
+<script>
+    AOS.init();
+</script>
 
 
 
@@ -599,17 +605,17 @@
 
 
 
-    <!-- Team Start -->
+<!-- Team Start -->
 <div class="container-fluid py-5">
     <div class="container pt-5">
         <div class="row justify-content-center text-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
                 <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Equipo de Soporte</h6>
                 <h1 class="mb-5">Conoce a Nuestro Equipo</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="team position-relative overflow-hidden mb-5">
                     <img class="img-fluid" src="img/team-1.jpg" alt="">
                     <div class="position-relative text-center">
@@ -626,7 +632,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                 <div class="team position-relative overflow-hidden mb-5">
                     <img class="img-fluid" src="img/team-2.jpg" alt="">
                     <div class="position-relative text-center">
@@ -643,7 +649,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                 <div class="team position-relative overflow-hidden mb-5">
                     <img class="img-fluid" src="img/team-3.jpg" alt="">
                     <div class="position-relative text-center">
@@ -660,7 +666,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
                 <div class="team position-relative overflow-hidden mb-5">
                     <img class="img-fluid" src="img/team-4.jpg" alt="">
                     <div class="position-relative text-center">
@@ -682,6 +688,9 @@
 </div>
 <!-- Team End -->
 
+<script>
+    AOS.init();
+</script>
 
 
 
@@ -693,45 +702,45 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="row align-items-center">
-            <div class="col-lg-6 pb-5 pb-lg-0">
-                <img class="img-fluid w-100" src="img/testimonial.jpg" alt="Clientes satisfechos con el soporte">
+            <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                <img class="img-fluid w-100 rounded shadow-lg" src="img/testimonial.jpg" alt="Clientes satisfechos con el soporte">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
                 <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Opiniones</h6>
                 <h1 class="mb-4">Lo que dicen nuestros usuarios</h1>
                 <div class="owl-carousel testimonial-carousel">
                     <div class="position-relative">
-                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
+                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -10px; right: 0;"></i>
                         <div class="d-flex align-items-center mb-3">
-                            <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="Usuario 1">
+                            <img class="img-fluid rounded-circle border border-primary p-1" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="Usuario 1">
                             <div class="ml-3">
-                                <h6 class="text-uppercase">Carlos Méndez</h6>
-                                <span>Emprendedor</span>
+                                <h6 class="text-uppercase font-weight-bold">Carlos Méndez</h6>
+                                <span class="text-muted">Emprendedor</span>
                             </div>
                         </div>
-                        <p class="m-0">"El soporte fue increíblemente rápido y resolvieron mi problema en minutos. ¡Definitivamente recomendado!"</p>
+                        <p class="m-0 fst-italic">"El soporte fue increíblemente rápido y resolvieron mi problema en minutos. ¡Definitivamente recomendado!"</p>
                     </div>
                     <div class="position-relative">
-                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
+                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -10px; right: 0;"></i>
                         <div class="d-flex align-items-center mb-3">
-                            <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="Usuario 2">
+                            <img class="img-fluid rounded-circle border border-primary p-1" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="Usuario 2">
                             <div class="ml-3">
-                                <h6 class="text-uppercase">María López</h6>
-                                <span>Freelancer</span>
+                                <h6 class="text-uppercase font-weight-bold">María López</h6>
+                                <span class="text-muted">Freelancer</span>
                             </div>
                         </div>
-                        <p class="m-0">"Nunca había tenido una experiencia de soporte tan eficiente. Respondieron mis dudas al instante."</p>
+                        <p class="m-0 fst-italic">"Nunca había tenido una experiencia de soporte tan eficiente. Respondieron mis dudas al instante."</p>
                     </div>
                     <div class="position-relative">
-                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0;"></i>
+                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -10px; right: 0;"></i>
                         <div class="d-flex align-items-center mb-3">
-                            <img class="img-fluid rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="Usuario 3">
+                            <img class="img-fluid rounded-circle border border-primary p-1" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="Usuario 3">
                             <div class="ml-3">
-                                <h6 class="text-uppercase">Javier Torres</h6>
-                                <span>Desarrollador Web</span>
+                                <h6 class="text-uppercase font-weight-bold">Javier Torres</h6>
+                                <span class="text-muted">Desarrollador Web</span>
                             </div>
                         </div>
-                        <p class="m-0">"El chat de soporte me ayudó a solucionar un error técnico en mi sitio web en tiempo récord. ¡Excelente atención!"</p>
+                        <p class="m-0 fst-italic">"El chat de soporte me ayudó a solucionar un error técnico en mi sitio web en tiempo récord. ¡Excelente atención!"</p>
                     </div>
                 </div>
             </div>
@@ -740,9 +749,9 @@
 </div>
 <!-- Testimonial End -->
 
-
-
-
+<script>
+    AOS.init();
+</script>
 
 
 
@@ -875,6 +884,16 @@
         
 
 
+
+
+
+
+
+
+
+
+
+        
 
 
 
