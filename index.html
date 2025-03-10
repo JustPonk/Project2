@@ -252,7 +252,7 @@
                 animatedText.style.animation = "fadeInText 0.5s ease-in-out forwards";
             }, 500);
     
-        }, 1000); // Retraso de 1 segundos antes de iniciar la animación
+        }, 800); // Retraso de 1 segundos antes de iniciar la animación
     });
     </script>
     
@@ -870,264 +870,153 @@
 
 
 
-        <style>
-            /* Topbar con fondo azul oscuro */
-            .container-fluid.bg-light {
-                background: #0d47a1 !important; /* Azul oscuro */
-            }
-        
-            .container-fluid.bg-light .text-left small, 
-            .container-fluid.bg-light .text-right small {
-                color: #ffffff;
-            }
-        
-            /* Navbar con un toque azul claro */
-            .navbar {
-                background-color: #1976d2; /* Azul claro */
-            }
-        
-            /* Cambio de color a blanco para los íconos de las redes sociales */
-            .navbar .text-primary {
-                color: #ffffff !important;
-            }
-        
-            /* Botón "Iniciar Chat" con color azul oscuro */
-            .btn-primary {
-                background-color: #0d47a1;
-                border-color: #0d47a1;
-            }
-        
-            .btn-primary:hover {
-                background-color: #1565c0;
-                border-color: #1565c0;
-            }
-        
-            /* Fondo de los slides del carousel con tonos azules */
-            .carousel-item {
-                background: linear-gradient(135deg, rgba(13, 71, 161, 0.7), rgba(25, 118, 210, 0.7));
-            }
-        
-            /* Estilo del texto en los slides */
-            .carousel-caption h3 {
-                color: #ffffff;
-                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            }
-        
-            .carousel-caption p {
-                color: #e1f5fe; /* Color azul muy suave para el texto */
-            }
-        
-            .carousel-caption a {
-                background-color: #0d47a1;
-                border-color: #0d47a1;
-            }
-        
-            .carousel-caption a:hover {
-                background-color: #1565c0;
-                border-color: #1565c0;
-            }
 
 
-            /* Fondo azulado para la sección About */
-    .container-fluid.py-5 {
-        background-color: #5c9c9f; /* Fondo con un azul suave */
-    }
+<style>
 
-    /* Estilo de los textos de la sección About */
-    .animate-text h6 {
-        background-color: #1976d2; /* Azul claro */
-        color: white;
-    }
+/* Cambiar enlaces rosados a azul */
+a {
+  color: #007bff !important; /* Azul */
+  text-decoration: none;
+  background-color: transparent;
+}
 
-    .animate-text h1 {
-        color: white; /* Títulos en blanco */
-    }
+a:hover {
+  color: #0056b3 !important; /* Azul más oscuro al pasar el mouse */
+  text-decoration: underline;
+}
 
-    .animate-text p {
-        color: white; /* Texto de párrafos en blanco */
-    }
+/* Cambiar botones rosados a azul */
+.btn-primary {
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+}
 
-    .animate-text .border-left {
-        border-left: 3px solid #1976d2; /* Borde izquierdo azul */
-    }
+.btn-primary:hover {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
 
-    .animate-text .text-primary {
-        color: #1976d2; /* Color azul claro para los contadores */
-    }
+/* Cambiar textos que podrían estar en rosado */
+.text-primary {
+  color: #007bff !important;
+}
 
-    /* Fondo azulado para la sección Service */
-    .container-fluid.px-0.py-5.my-5 {
-        background-color: #5c9c9f; /* Fondo con un azul suave */
-    }
+/* Bordes que puedan estar en rosado */
+.border-primary {
+  border-color: #007bff !important;
+}
 
-    /* Títulos de la sección Service */
-    .service-item .service-text h4 {
-        color: white; /* Títulos de los servicios en blanco */
-    }
+/* Otros botones con borde rosado */
+.btn-outline-light {
+  color: #007bff !important;
+  border-color: #007bff !important;
+}
 
-    /* Texto de los párrafos en la sección Service */
-    .service-item .service-text p {
-        color: white; /* Texto de los párrafos en blanco */
-    }
+.btn-outline-light:hover {
+  background-color: #007bff !important;
+  color: white !important;
+}
 
-    /* Botones en la sección Service */
-    .service-item .service-text .btn-primary {
-        background-color: #0d47a1; /* Azul oscuro para los botones */
-        border-color: #0d47a1;
-    }
+/* General */
+.bg-primary {
+    background-color: #007bff !important; /* Azul */
+}
 
-    .service-item .service-text .btn-primary:hover {
-        background-color: #1565c0;
-        border-color: #1565c0;
-    }
+.text-primary {
+    color: #007bff !important; /* Azul */
+}
 
-    /* Fondo de la sección de "Solicitar Soporte" en Service */
-    .bg-appointment {
-        background-color: #1976d2; /* Azul claro para el fondo */
-    }
+.btn-primary {
+    background-color: #007bff !important; /* Azul */
+    border-color: #007bff !important;
+}
 
-    /* Estilo de los botones en "Solicitar Soporte" */
-    .bg-appointment .btn-primary {
-        background-color: #0d47a1;
-        border-color: #0d47a1;
-    }
+.btn-primary:hover {
+    background-color: #0056b3 !important; /* Azul más oscuro */
+    border-color: #0056b3 !important;
+}
 
-    .bg-appointment .btn-primary:hover {
-        background-color: #1565c0;
-        border-color: #1565c0;
-    }
-/* Open Hours */
-.container-fluid.py-5 {
-        background-color: #5c9c9f; /* Fondo azul suave */
-    }
+/* Servicios */
+.service-text {
+    background-color: rgba(0, 123, 255, 0.8); /* Azul con transparencia */
+}
 
-    .hours-text {
-        background-color: #ffffff; /* Fondo blanco para el cuadro de texto */
-        border-radius: 8px;
-        padding: 20px;
-    }
+/* Formulario de soporte */
+.bg-appointment {
+    background-color: #007bff !important; /* Azul */
+}
 
-    .hours-text h6 {
-        background-color: #1976d2; /* Azul claro */
-        color: white;
-        text-transform: uppercase;
-        padding: 5px 15px;
-    }
+/* Horario del chat */
+.hours-text .bg-primary {
+    background-color: #007bff !important; /* Azul */
+}
 
-    .hours-text h1 {
-        color: #0d47a1; /* Azul oscuro */
-    }
+/* Precios */
+.bg-pricing {
+    background-color: #007bff !important; /* Azul */
+}
 
-    .hours-text p {
-        color: #333; /* Texto oscuro */
-    }
+.border-primary {
+    border-color: #007bff !important; /* Azul */
+}
 
-    .hours-text ul li {
-        color: #555; /* Texto de horario en gris oscuro */
-    }
+/* Equipo */
+.team-text {
+    background-color: #007bff !important; /* Azul */
+}
 
-    .hours-text .btn-primary {
-        background-color: #0d47a1;
-        border-color: #0d47a1;
-    }
+.team-social .btn-outline-primary {
+    border-color: #007bff !important; /* Azul */
+    color: #007bff !important;
+}
 
-    .hours-text .btn-primary:hover {
-        background-color: #1565c0;
-        border-color: #1565c0;
-    }
+.team-social .btn-outline-primary:hover {
+    background-color: #007bff !important;
+    color: #fff !important;
+}
 
-    /* Pricing */
-    .bg-pricing {
-        background-color: #5c9c9f; /* Fondo azul suave */
-    }
+/* Testimonios */
+.text-primary {
+    color: #007bff !important; /* Azul */
+}
 
-    .pricing-text {
-        background-color: #ffffff; /* Fondo blanco para los cuadros de precios */
-        border-radius: 8px;
-        padding: 20px;
-    }
+.bg-light {
+    background-color: #f8f9fa !important; /* Mantiene el fondo claro */
+}
 
-    .pricing-text h1 {
-        color: #1976d2; /* Azul claro */
-    }
+.fa-quote-right.text-primary {
+    color: #007bff !important; /* Icono de comillas en azul */
+}
 
-    .pricing-text .display-4 {
-        color: #0d47a1; /* Azul oscuro */
-    }
+/* Footer */
+.footer h1 span.text-primary {
+    color: #007bff !important; /* Parte del logo en azul */
+}
 
-    .pricing-text .text-primary {
-        color: #1976d2; /* Azul claro */
-    }
+.btn-primary {
+    background-color: #007bff !important; /* Botones de redes sociales en azul */
+    border-color: #007bff !important;
+}
 
-    .pricing-text .btn-primary {
-        background-color: #0d47a1;
-        border-color: #0d47a1;
-    }
+.btn-primary:hover {
+    background-color: #0056b3 !important; /* Azul más oscuro al pasar el mouse */
+    border-color: #0056b3 !important;
+}
 
-    .pricing-text .btn-primary:hover {
-        background-color: #1565c0;
-        border-color: #1565c0;
-    }
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important; /* Mantiene enlaces en footer en su estilo */
+}
 
-    .pricing-carousel .bg-white {
-        border-radius: 8px;
-    }
+.input-group-append .btn-primary {
+    background-color: #007bff !important; /* Botón de suscripción en azul */
+    border-color: #007bff !important;
+}
 
-    /* Team */
-    .container-fluid.py-5 {
-        background-color: #5c9c9f; /* Fondo azul suave */
-    }
 
-    .team-text {
-        background-color: #1976d2; /* Fondo azul claro para los cuadros de texto */
-        color: white;
-        border-radius: 8px;
-        padding: 20px;
-    }
 
-    .team-social {
-        background-color: #333; /* Fondo oscuro para los íconos sociales */
-        border-radius: 50%;
-    }
-
-    .team-social .btn-square {
-        border-radius: 50%;
-    }
-
-    .team-social a {
-        color: #ffffff;
-    }
-
-    /* Testimonial */
-    .container-fluid.py-5 {
-        background-color: #5c9c9f; /* Fondo azul suave */
-    }
-
-    .testimonial-carousel {
-        background-color: #ffffff; /* Fondo blanco para las opiniones */
-        border-radius: 8px;
-        padding: 20px;
-    }
-
-    .testimonial-carousel .fa-quote-right {
-        color: #1976d2; /* Azul claro para las comillas */
-    }
-
-    .testimonial-carousel .d-flex img {
-        border-radius: 50%; /* Imágenes redondeadas */
-    }
-
-    .testimonial-carousel h6 {
-        color: #1976d2; /* Azul claro */
-    }
-
-    .testimonial-carousel p {
-        color: #333; /* Texto oscuro para las opiniones */
-    }
-
-    
-        </style>
-        
+</style>
+ 
 
 
 </body>
