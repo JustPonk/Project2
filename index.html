@@ -186,25 +186,29 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <div class="row align-items-center">
+            <!-- Imagen que se desliza desde la izquierda -->
             <div class="col-lg-6 pb-5 pb-lg-0">
-                <img class="img-fluid w-100" src="img/about.jpg" alt="">
+                <img class="img-fluid w-100 animate-image" src="img/about.jpg" alt="">
             </div>
-            <div class="col-lg-6">
+            
+            <!-- Contenedor de texto que se desliza desde la derecha -->
+            <div class="col-lg-6 animate-text">
                 <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Sobre Nosotros</h6>
                 <h1 class="mb-4">El Mejor Servicio de Atención y Soporte</h1>
                 <p class="pl-4 border-left border-primary">
                     Brindamos asistencia rápida y eficaz a todos nuestros clientes. Nuestro equipo de soporte está disponible en todo momento para resolver tus dudas y garantizarte la mejor experiencia.
                 </p>
+                
                 <div class="row pt-3">
                     <div class="col-6">
                         <div class="bg-light text-center p-4">
-                            <h3 class="display-4 text-primary" data-toggle="counter-up">250</h3>
+                            <h3 class="display-4 text-primary counter" data-toggle="counter-up">250</h3>
                             <h6 class="text-uppercase">Expertos en Soporte</h6>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="bg-light text-center p-4">
-                            <h3 class="display-4 text-primary" data-toggle="counter-up">10000</h3>
+                            <h3 class="display-4 text-primary counter" data-toggle="counter-up">10000</h3>
                             <h6 class="text-uppercase">Clientes Felices</h6>
                         </div>
                     </div>
@@ -214,6 +218,51 @@
     </div>
 </div>
 <!-- About End -->
+
+<style>
+    /* Animación de la imagen (desde la izquierda) */
+    .animate-image {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    }
+    .animate-image.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Animación del texto (desde la derecha) */
+    .animate-text {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: transform 1.5s ease-out 0.3s, opacity 1.5s ease-out 0.3s;
+    }
+    .animate-text.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const img = document.querySelector(".animate-image");
+        const text = document.querySelector(".animate-text");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    img.classList.add("show");
+                    text.classList.add("show");
+                    observer.unobserve(entry.target); // Deja de observar después de animar
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(img);
+        observer.observe(text);
+    });
+</script>
+
 
 
 
