@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SPA Center - Beauty & Spa HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+<!-- AOS Animation Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body><!-- Topbar Start -->
+    <div class="container-fluid bg-light d-none d-lg-block">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-left mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <small><i class="fa fa-phone-alt mr-2"></i>Support: +012 345 6789</small>
+                    <small class="px-3">|</small>
+                    <small><i class="fa fa-envelope mr-2"></i>support@example.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-primary px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-primary pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="index.html" class="navbar-brand ml-lg-3 fade-in">
+                <h1 class="m-0 text-primary"><span class="text-dark">Chat</span> Support</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                    <a href="index.html" class="nav-item nav-link active lang fade-in" data-key="home">Home</a>
+                    <a href="about.html" class="nav-item nav-link lang fade-in" data-key="about">About Us</a>
+                    <a href="service.html" class="nav-item nav-link lang fade-in" data-key="services">Services</a>
+                    <a href="faq.html" class="nav-item nav-link lang fade-in" data-key="faq">FAQ</a>
+                    <div class="nav-item dropdown fade-in">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">🌍 Language</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="#" class="dropdown-item change-lang" data-lang="en">🇬🇧 English</a>
+                            <a href="#" class="dropdown-item change-lang" data-lang="es">🇪🇸 Español</a>
+                            <a href="#" class="dropdown-item change-lang" data-lang="fr">🇫🇷 Français</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link lang fade-in" data-key="contact">Contact</a>
+                </div>
+                <a href="chat.html" class="btn btn-primary d-none d-lg-block lang fade-in" data-key="start-chat">Start Chat</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    
+    <style>
+        /* Opacity animation */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-in;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navItems = document.querySelectorAll(".fade-in");
+    
+            navItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add("show");
+                }, index * 150); // 150ms delay between each
+            });
+        });
+    </script>
+    
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="min-height: 100vh;">
+                    <img class="position-absolute w-100 h-100 first-slide-img" 
+                         src="https://knowmax-ai-website.s3.amazonaws.com/wp-content/uploads/2022/09/19172056/chat-support-scripts.webp" 
+                         style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3 animated-text" style="max-width: 900px;">
+                            <h3 class="display-3 text-capitalize text-white mb-3">Live Assistance</h3>
+                            <p class="mx-md-5 px-5">Our team is available 24/7 to answer your questions and provide the best real-time help.</p>
+                            <a class="btn btn-outline-light py-3 px-4 mt-3" href="#">Start Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
+                    <img class="img-fluid w-100" src="https://i0.wp.com/blog.happyfox.com/wp-content/uploads/2021/05/X_Steps_to_Successful_Live_Chat_Implementation_for_Customer_Support-02.png?resize=1200%2C1200&ssl=1" alt="">
+                </div>
+    
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300" data-aos-once="true">
+                    <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">About Us</h6>
+                    <h1 class="mb-4">The Best Customer Support Service</h1>
+                    <p class="pl-4 border-left border-primary">
+                        We provide fast and efficient assistance to all our customers. Our support team is available at all times to answer your questions and ensure the best experience.
+                    </p>
+    
+                    <div class="row pt-3">
+                        <div class="col-6" data-aos="zoom-in" data-aos-duration="1200" data-aos-once="true">
+                            <div class="bg-light text-center p-4">
+                                <h3 class="display-4 text-primary counter" data-toggle="counter-up">250</h3>
+                                <h6 class="text-uppercase">Support Experts</h6>
+                            </div>
+                        </div>
+                        <div class="col-6" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300" data-aos-once="true">
+                            <div class="bg-light text-center p-4">
+                                <h3 class="display-4 text-primary counter" data-toggle="counter-up">10000</h3>
+                                <h6 class="text-uppercase">Happy Customers</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    
+<script>
+    AOS.init();
+</script>
+
+
+
+
+
+
+
+
+<!-- Service Start -->
+<div class="container-fluid px-0 py-5 my-5">
+    <div class="row mx-0 justify-content-center text-center">
+        <div class="col-lg-6">
+            <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Nuestros Servicios</h6>
+            <h1>Soporte y Atención al Cliente</h1>
+        </div>
+    </div>
+    <div class="owl-carousel service-carousel">
+        <div class="service-item position-relative">
+            <img class="img-fluid" src="https://static.liveperson.com/static-assets/2022/02/11001131/Support_Technical-Support_2-Photo-LE_02-10_2x.jpg" alt="">
+            <div class="service-text text-center">
+                <h4 class="text-white font-weight-medium px-3">Soporte en Vivo</h4>
+                <p class="text-white px-3 mb-3">Nuestro equipo está disponible 24/7 para resolver tus dudas en tiempo real.</p>
+                <div class="w-100 bg-white text-center p-4">
+                    <a class="btn btn-primary" href="">Iniciar Chat</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-item position-relative">
+            <img class="img-fluid" src="https://www.beacontelecom.com/wp-content/uploads/2020/07/TechSupportImage.jpeg" alt="">
+            <div class="service-text text-center">
+                <h4 class="text-white font-weight-medium px-3">Asesoría Personalizada</h4>
+                <p class="text-white px-3 mb-3">Te brindamos soluciones adaptadas a tus necesidades específicas.</p>
+                <div class="w-100 bg-white text-center p-4">
+                    <a class="btn btn-primary" href="">Contactar Soporte</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-item position-relative">
+            <img class="img-fluid" src="https://images.ctfassets.net/5i1m3im8l2b5/5yLgQr5c29UlkwTN7nDyUY/6f5d6a7d6b8e14129d75c72ecb1413a7/What_is_tech_support.jpg?w=1200&h=630&fl=progressive&q=50&fm=jpg" alt="">
+            <div class="service-text text-center">
+                <h4 class="text-white font-weight-medium px-3">Base de Conocimientos</h4>
+                <p class="text-white px-3 mb-3">Explora nuestras guías y documentación para encontrar respuestas rápidas.</p>
+                <div class="w-100 bg-white text-center p-4">
+                    <a class="btn btn-primary" href="">Ver Guías</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-item position-relative">
+            <img class="img-fluid" src="https://www.glentechltd.co.uk/shared/images/content/bus_57702/thumbnails/business-tech-support-01.jpg?cache=70368" alt="">
+            <div class="service-text text-center">
+                <h4 class="text-white font-weight-medium px-3">Resolución de Problemas</h4>
+                <p class="text-white px-3 mb-3">Identificamos y solucionamos los errores en el menor tiempo posible.</p>
+                <div class="w-100 bg-white text-center p-4">
+                    <a class="btn btn-primary" href="">Reportar Problema</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-item position-relative">
+            <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-ndwHhS_nt6uDiQq2x03HZghNK9fDX1msjAOoIvFqoyhDmIe__Bn5ZE-a5Z-MaXBmF4&usqp=CAU" alt="">
+            <div class="service-text text-center">
+                <h4 class="text-white font-weight-medium px-3">Consultoría Técnica</h4>
+                <p class="text-white px-3 mb-3">Solicita asesoramiento técnico para mejorar tu experiencia.</p>
+                <div class="w-100 bg-white text-center p-4">
+                    <a class="btn btn-primary" href="">Agendar Consulta</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-item position-relative">
+            <img class="img-fluid" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossless,ret_img,w_1030,h_644/https://brock-it.ca/wp-content/uploads/2021/09/Tech-Support-Worker-on-a-Call-1030x644.jpg" alt="">
+            <div class="service-text text-center">
+                <h4 class="text-white font-weight-medium px-3">Feedback y Sugerencias</h4>
+                <p class="text-white px-3 mb-3">Envíanos tus comentarios para seguir mejorando nuestros servicios.</p>
+                <div class="w-100 bg-white text-center p-4">
+                    <a class="btn btn-primary" href="">Enviar Feedback</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center bg-appointment mx-0">
+        <div class="col-lg-6 py-5">
+            <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7);">
+                <h1 class="text-white text-center mb-4">Solicita Soporte</h1>
+                <form>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control bg-transparent p-4" placeholder="Tu Nombre" required="required" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control bg-transparent p-4" placeholder="Tu Correo" required="required" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Selecciona una Fecha" data-target="#date" data-toggle="datetimepicker"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="time" id="time" data-target-input="nearest">
+                                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input" placeholder="Selecciona un Horario" data-target="#time" data-toggle="datetimepicker"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <select class="custom-select bg-transparent px-4" style="height: 47px;">
+                                    <option selected>Selecciona un Servicio</option>
+                                    <option value="1">Soporte en Vivo</option>
+                                    <option value="2">Consultoría Técnica</option>
+                                    <option value="3">Resolución de Problemas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Solicitar Soporte</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+
+
+
+
+
+
+
+
+<!-- Open Hours Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="https://img.freepik.com/premium-vector/young-female-character-is-working-customer-support-flat-simple-vector-illustrations_1062857-2.jpg" style="object-fit: cover;" data-aos="fade-right" data-aos-duration="1000">
+                </div>
+            </div>
+            <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="hours-text bg-light p-4 p-lg-5 my-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2" data-aos="zoom-in" data-aos-delay="300">Horario del Chat</h6>
+                    <h1 class="mb-4" data-aos="fade-up" data-aos-delay="500">Estamos aquí para ayudarte</h1>
+                    <p data-aos="fade-up" data-aos-delay="700">Nuestro chat de soporte está disponible para resolver tus dudas y asistirte en tiempo real. Escríbenos durante nuestro horario de atención y uno de nuestros agentes te ayudará.</p>
+                    <ul class="list-inline">
+                        <li class="h6 py-1" data-aos="fade-up" data-aos-delay="900"><i class="far fa-circle text-primary mr-3"></i>Lunes – Viernes : 9:00 AM - 7:00 PM</li>
+                        <li class="h6 py-1" data-aos="fade-up" data-aos-delay="1000"><i class="far fa-circle text-primary mr-3"></i>Sábado : 9:00 AM - 6:00 PM</li>
+                        <li class="h6 py-1" data-aos="fade-up" data-aos-delay="1100"><i class="far fa-circle text-primary mr-3"></i>Domingo : Cerrado</li>
+                    </ul>
+                    <a href="" class="btn btn-primary mt-2" data-aos="zoom-in" data-aos-delay="1300">Abrir Chat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Open Hours End -->
+
+<script>
+    AOS.init();
+</script>
+
+
+
+
+
+    
+<!-- Pricing Start -->
+<div class="container-fluid bg-pricing" style="margin: 90px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="https://t4.ftcdn.net/jpg/09/66/03/63/360_F_966036331_PWNeHJ2NPwpE1BUxKYrbcVOatO0lOUhK.jpg" style="object-fit: cover;" data-aos="fade-right" data-aos-duration="1000">
+                </div>
+            </div>
+            <div class="col-lg-7 pt-5 pb-lg-5">
+                <div class="pricing-text bg-light p-4 p-lg-5 my-lg-5" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="owl-carousel pricing-carousel">
+                        <div class="bg-white" data-aos="flip-left" data-aos-duration="1200">
+                            <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
+                                <h1 class="display-4 mb-0">
+                                    <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>19<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mes</small>
+                                </h1>
+                                <h5 class="text-primary text-uppercase m-0">Plan Básico</h5>
+                            </div>
+                            <div class="p-4">
+                                <p data-aos="fade-up" data-aos-delay="200"><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 8/5</p>
+                                <p data-aos="fade-up" data-aos-delay="300"><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta estándar</p>
+                                <p data-aos="fade-up" data-aos-delay="400"><i class="fa fa-check text-success mr-2"></i>Acceso a preguntas frecuentes</p>
+                                <p data-aos="fade-up" data-aos-delay="500"><i class="fa fa-check text-success mr-2"></i>Historial de consultas limitado</p>
+                                <a href="" class="btn btn-primary my-2" data-aos="zoom-in" data-aos-delay="600">Elegir Plan</a>
+                            </div>
+                        </div>
+                        <div class="bg-white" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="300">
+                            <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
+                                <h1 class="display-4 mb-0">
+                                    <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>39<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mes</small>
+                                </h1>
+                                <h5 class="text-primary text-uppercase m-0">Plan Profesional</h5>
+                            </div>
+                            <div class="p-4">
+                                <p data-aos="fade-up" data-aos-delay="200"><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 24/5</p>
+                                <p data-aos="fade-up" data-aos-delay="300"><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta prioritario</p>
+                                <p data-aos="fade-up" data-aos-delay="400"><i class="fa fa-check text-success mr-2"></i>Soporte técnico avanzado</p>
+                                <p data-aos="fade-up" data-aos-delay="500"><i class="fa fa-check text-success mr-2"></i>Historial de consultas ilimitado</p>
+                                <a href="" class="btn btn-primary my-2" data-aos="zoom-in" data-aos-delay="600">Elegir Plan</a>
+                            </div>
+                        </div>
+                        <div class="bg-white" data-aos="flip-left" data-aos-duration="1200" data-aos-delay="600">
+                            <div class="d-flex align-items-center justify-content-between border-bottom border-primary p-4">
+                                <h1 class="display-4 mb-0">
+                                    <small class="align-top text-muted font-weight-medium" style="font-size: 22px; line-height: 45px;">$</small>79<small class="align-bottom text-muted font-weight-medium" style="font-size: 16px; line-height: 40px;">/Mes</small>
+                                </h1>
+                                <h5 class="text-primary text-uppercase m-0">Plan Empresarial</h5>
+                            </div>
+                            <div class="p-4">
+                                <p data-aos="fade-up" data-aos-delay="200"><i class="fa fa-check text-success mr-2"></i>Soporte vía chat 24/7</p>
+                                <p data-aos="fade-up" data-aos-delay="300"><i class="fa fa-check text-success mr-2"></i>Agente de soporte dedicado</p>
+                                <p data-aos="fade-up" data-aos-delay="400"><i class="fa fa-check text-success mr-2"></i>Tiempo de respuesta ultrarrápido</p>
+                                <p data-aos="fade-up" data-aos-delay="500"><i class="fa fa-check text-success mr-2"></i>Integración con herramientas empresariales</p>
+                                <a href="" class="btn btn-primary my-2" data-aos="zoom-in" data-aos-delay="600">Elegir Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pricing End -->
+
+<script>
+    AOS.init();
+</script>
+
+
+
+
+
+
+
+<!-- Team Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+                <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Equipo de Soporte</h6>
+                <h1 class="mb-5">Conoce a Nuestro Equipo</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="team position-relative overflow-hidden mb-5">
+                    <img class="img-fluid" src="https://blog-pixomatic.s3.appcnt.com/image/22/01/26/61f166e07f452/_orig/pixomatic_1572877263963.png" alt="">
+                    <div class="position-relative text-center">
+                        <div class="team-text bg-primary text-white">
+                            <h5 class="text-white text-uppercase">Olivia Martínez</h5>
+                            <p class="m-0">Especialista en Atención al Cliente</p>
+                        </div>
+                        <div class="team-social bg-dark text-center">
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                <div class="team position-relative overflow-hidden mb-5">
+                    <img class="img-fluid" src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=" alt="">
+                    <div class="position-relative text-center">
+                        <div class="team-text bg-primary text-white">
+                            <h5 class="text-white text-uppercase">Carlos Fernández</h5>
+                            <p class="m-0">Soporte Técnico</p>
+                        </div>
+                        <div class="team-social bg-dark text-center">
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                <div class="team position-relative overflow-hidden mb-5">
+                    <img class="img-fluid" src="https://media.istockphoto.com/id/1398385367/photo/happy-millennial-business-woman-in-glasses-posing-with-hands-folded.jpg?s=612x612&w=0&k=20&c=Wd2vTDd6tJ5SeEY-aw0WL0bew8TAkyUGVvNQRj3oJFw=" alt="">
+                    <div class="position-relative text-center">
+                        <div class="team-text bg-primary text-white">
+                            <h5 class="text-white text-uppercase">Elena Ríos</h5>
+                            <p class="m-0">Gestora de Clientes</p>
+                        </div>
+                        <div class="team-social bg-dark text-center">
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+                <div class="team position-relative overflow-hidden mb-5">
+                    <img class="img-fluid" src="https://media.istockphoto.com/id/1474229876/photo/portrait-of-businessman-in-suit-sending-message-on-cell-phone-in-studio-with-gray-background.jpg?s=612x612&w=0&k=20&c=5ZW4TB82DRvVWjdNISJPZKRlI0JmsoBPO2VVVPmxvUs=" alt="">
+                    <div class="position-relative text-center">
+                        <div class="team-text bg-primary text-white">
+                            <h5 class="text-white text-uppercase">Javier López</h5>
+                            <p class="m-0">Coordinador de Soporte</p>
+                        </div>
+                        <div class="team-social bg-dark text-center">
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<script>
+    AOS.init();
+</script>
+
+
+
+
+
+
+
+<!-- Testimonial Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                <img class="img-fluid w-100 rounded shadow-lg" src="https://cdn-icons-gif.flaticon.com/16766/16766929.gif" alt="Clientes satisfechos con el soporte">
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Opiniones</h6>
+                <h1 class="mb-4">Lo que dicen nuestros usuarios</h1>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="position-relative">
+                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -10px; right: 0;"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <img class="img-fluid rounded-circle border border-primary p-1" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="Usuario 1">
+                            <div class="ml-3">
+                                <h6 class="text-uppercase font-weight-bold">Carlos Méndez</h6>
+                                <span class="text-muted">Emprendedor</span>
+                            </div>
+                        </div>
+                        <p class="m-0 fst-italic">"El soporte fue increíblemente rápido y resolvieron mi problema en minutos. ¡Definitivamente recomendado!"</p>
+                    </div>
+                    <div class="position-relative">
+                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -10px; right: 0;"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <img class="img-fluid rounded-circle border border-primary p-1" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="Usuario 2">
+                            <div class="ml-3">
+                                <h6 class="text-uppercase font-weight-bold">María López</h6>
+                                <span class="text-muted">Freelancer</span>
+                            </div>
+                        </div>
+                        <p class="m-0 fst-italic">"Nunca había tenido una experiencia de soporte tan eficiente. Respondieron mis dudas al instante."</p>
+                    </div>
+                    <div class="position-relative">
+                        <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -10px; right: 0;"></i>
+                        <div class="d-flex align-items-center mb-3">
+                            <img class="img-fluid rounded-circle border border-primary p-1" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" alt="Usuario 3">
+                            <div class="ml-3">
+                                <h6 class="text-uppercase font-weight-bold">Javier Torres</h6>
+                                <span class="text-muted">Desarrollador Web</span>
+                            </div>
+                        </div>
+                        <p class="m-0 fst-italic">"El chat de soporte me ayudó a solucionar un error técnico en mi sitio web en tiempo récord. ¡Excelente atención!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+<script>
+    AOS.init();
+</script>
+
+<!-- Footer Start -->
+<div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-6 pr-lg-5 mb-5" data-aos="fade-up" data-aos-duration="1000">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="mb-3 text-white"><span class="text-primary">Chat</span> Soporte</h1>
+                </a>
+                <p class="text-white-50">Estamos aquí para ayudarte en cualquier momento. Nuestro equipo de soporte está disponible <strong>24/7</strong> para resolver tus dudas y brindarte la mejor asistencia posible.</p>
+                <p class="text-white-50"><i class="fa fa-map-marker-alt mr-2"></i>Centro de Soporte, Online</p>
+                <p class="text-white-50"><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p class="text-white-50"><i class="fa fa-envelope mr-2"></i>soporte@ejemplo.com</p>
+                <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 pl-lg-5">
+                <div class="row">
+                    <div class="col-sm-6 mb-5" data-aos="fade-left" data-aos-duration="1000">
+                        <h5 class="text-white text-uppercase mb-4">Enlaces Rápidos</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Inicio</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Acerca de</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Soporte</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Planes</a>
+                            <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contacto</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-5" data-aos="fade-left" data-aos-duration="1200">
+                        <h5 class="text-white text-uppercase mb-4">Nuestros Servicios</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Soporte Técnico</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Asistencia en Vivo</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Resolución de Problemas</a>
+                            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Gestión de Tickets</a>
+                            <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Atención al Cliente</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mb-5" data-aos="fade-left" data-aos-duration="1400">
+                        <h5 class="text-white text-uppercase mb-4">Suscríbete</h5>
+                        <div class="w-100">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-light" style="padding: 20px; border-radius: 10px 0 0 10px;" placeholder="Tu correo electrónico">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary px-4" style="border-radius: 0 10px 10px 0;">Suscribirse</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark text-light border-top py-4" style="border-color: rgba(256, 256, 256, .15) !important;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#">Chat Soporte</a>. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <p class="m-0 text-white">Desarrollado por <a href="#">Tu Empresa</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<script>
+    AOS.init();
+</script>
+
+
+
+
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let sections = document.querySelectorAll(".container-fluid"); // Secciones principales
+            let currentSectionIndex = 0;
+            let isScrolling = false;
+            let scrollingCompleted = false; // Bandera para desactivar la función tras el primer recorrido completo
+    
+            window.addEventListener("wheel", function (event) {
+                if (isScrolling || scrollingCompleted || event.deltaY <= 0) return; // Solo activa cuando el usuario baja
+    
+                isScrolling = true;
+                setTimeout(() => isScrolling = false, 800); // Evita múltiples activaciones
+    
+                // Scroll hacia abajo
+                if (currentSectionIndex < sections.length - 1) {
+                    currentSectionIndex++;
+                    sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+                }
+    
+                // Si el usuario ha llegado a la última sección, desactiva la función
+                if (currentSectionIndex === sections.length - 1) {
+                    scrollingCompleted = true;
+                }
+            });
+        });
+    </script>
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+<style>
+
+/* Cambiar enlaces rosados a azul */
+a {
+  color: #007bff !important; /* Azul */
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #0056b3 !important; /* Azul más oscuro al pasar el mouse */
+  text-decoration: underline;
+}
+
+/* Cambiar botones rosados a azul */
+.btn-primary {
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+/* Cambiar textos que podrían estar en rosado */
+.text-primary {
+  color: #007bff !important;
+}
+
+/* Bordes que puedan estar en rosado */
+.border-primary {
+  border-color: #007bff !important;
+}
+
+/* Otros botones con borde rosado */
+.btn-outline-light {
+  color: #007bff !important;
+  border-color: #007bff !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+/* General */
+.bg-primary {
+    background-color: #007bff !important; /* Azul */
+}
+
+.text-primary {
+    color: #007bff !important; /* Azul */
+}
+
+.btn-primary {
+    background-color: #007bff !important; /* Azul */
+    border-color: #007bff !important;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3 !important; /* Azul más oscuro */
+    border-color: #0056b3 !important;
+}
+
+/* Servicios */
+.service-text {
+    background-color: rgba(0, 123, 255, 0.8); /* Azul con transparencia */
+}
+
+/* Formulario de soporte */
+.bg-appointment {
+    background-color: #007bff !important; /* Azul */
+}
+
+/* Horario del chat */
+.hours-text .bg-primary {
+    background-color: #007bff !important; /* Azul */
+}
+
+/* Precios */
+.bg-pricing {
+    background-color: #007bff !important; /* Azul */
+}
+
+.border-primary {
+    border-color: #007bff !important; /* Azul */
+}
+
+/* Equipo */
+.team-text {
+    background-color: #007bff !important; /* Azul */
+}
+
+.team-social .btn-outline-primary {
+    border-color: #007bff !important; /* Azul */
+    color: #007bff !important;
+}
+
+.team-social .btn-outline-primary:hover {
+    background-color: #007bff !important;
+    color: #fff !important;
+}
+
+/* Testimonios */
+.text-primary {
+    color: #007bff !important; /* Azul */
+}
+
+.bg-light {
+    background-color: #f8f9fa !important; /* Mantiene el fondo claro */
+}
+
+.fa-quote-right.text-primary {
+    color: #007bff !important; /* Icono de comillas en azul */
+}
+
+/* Footer */
+.footer h1 span.text-primary {
+    color: #007bff !important; /* Parte del logo en azul */
+}
+
+.btn-primary {
+    background-color: #007bff !important; /* Botones de redes sociales en azul */
+    border-color: #007bff !important;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3 !important; /* Azul más oscuro al pasar el mouse */
+    border-color: #0056b3 !important;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important; /* Mantiene enlaces en footer en su estilo */
+}
+
+.input-group-append .btn-primary {
+    background-color: #007bff !important; /* Botón de suscripción en azul */
+    border-color: #007bff !important;
+}
+
+.service-carousel .service-item img {
+    width: 100% !important;
+    height: 350px !important; /* Ajusta la altura según necesites */
+    object-fit: cover !important;
+}
+
+.team img {
+    width: 100%; 
+    height: 300px; /* Ajusta la altura según necesites */
+    object-fit: cover; /* Recorta la imagen manteniendo la proporción */
+}
+
+
+
+
+
+
+
+
+
+</style>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.querySelectorAll(".change-lang").forEach(btn => {
+        btn.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+            let selectedLang = this.getAttribute("data-lang");
+
+            // Definir las rutas de cada idioma
+            let langPages = {
+                en: "index-en.html",
+                es: "index.html",
+                fr: "index-fr.html"
+            };
+
+            // Redirigir a la página correspondiente
+            if (langPages[selectedLang]) {
+                window.location.href = langPages[selectedLang];
+            }
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
