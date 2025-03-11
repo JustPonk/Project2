@@ -32,6 +32,9 @@
 
 
 
+
+
+
 </head>
 
 
@@ -1020,6 +1023,40 @@ a:hover {
 
 </style>
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    document.querySelectorAll(".change-lang").forEach(btn => {
+        btn.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+            let selectedLang = this.getAttribute("data-lang");
+
+            // Definir las rutas de cada idioma
+            let langPages = {
+                en: "index-en.html",
+                es: "index.html",
+                fr: "index-fr.html"
+            };
+
+            // Redirigir a la página correspondiente
+            if (langPages[selectedLang]) {
+                window.location.href = langPages[selectedLang];
+            }
+        });
+    });
+</script>
 
 
 </body>
