@@ -1,0 +1,204 @@
+   /* Animación de opacidad */
+   .fade-in {
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+
+/* Animación para la imagen */
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animación para el texto */
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ocultamos la imagen y el texto inicialmente */
+.first-slide-img {
+    opacity: 0;
+}
+
+.animated-text {
+    opacity: 0;
+}
+
+
+
+
+
+/* Cambiar enlaces rosados a azul */
+a {
+    color: #007bff !important; /* Azul */
+    text-decoration: none;
+    background-color: transparent;
+  }
+  
+  a:hover {
+    color: #0056b3 !important; /* Azul más oscuro al pasar el mouse */
+    text-decoration: underline;
+  }
+  
+  /* Cambiar botones rosados a azul */
+  .btn-primary {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3 !important;
+    border-color: #0056b3 !important;
+  }
+  
+  /* Cambiar textos que podrían estar en rosado */
+  .text-primary {
+    color: #007bff !important;
+  }
+  
+  /* Bordes que puedan estar en rosado */
+  .border-primary {
+    border-color: #007bff !important;
+  }
+  
+  /* Otros botones con borde rosado */
+  .btn-outline-light {
+    color: #007bff !important;
+    border-color: #007bff !important;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: #007bff !important;
+    color: white !important;
+  }
+  
+  /* General */
+  .bg-primary {
+      background-color: #007bff !important; /* Azul */
+  }
+  
+  .text-primary {
+      color: #007bff !important; /* Azul */
+  }
+  
+  .btn-primary {
+      background-color: #007bff !important; /* Azul */
+      border-color: #007bff !important;
+  }
+  
+  .btn-primary:hover {
+      background-color: #0056b3 !important; /* Azul más oscuro */
+      border-color: #0056b3 !important;
+  }
+  
+  /* Servicios */
+  .service-text {
+      background-color: rgba(0, 123, 255, 0.8); /* Azul con transparencia */
+  }
+  
+  /* Formulario de soporte */
+  .bg-appointment {
+      background-color: #007bff !important; /* Azul */
+  }
+  
+  /* Horario del chat */
+  .hours-text .bg-primary {
+      background-color: #007bff !important; /* Azul */
+  }
+  
+  /* Precios */
+  .bg-pricing {
+      background-color: #007bff !important; /* Azul */
+  }
+  
+  .border-primary {
+      border-color: #007bff !important; /* Azul */
+  }
+  
+  /* Equipo */
+  .team-text {
+      background-color: #007bff !important; /* Azul */
+  }
+  
+  .team-social .btn-outline-primary {
+      border-color: #007bff !important; /* Azul */
+      color: #007bff !important;
+  }
+  
+  .team-social .btn-outline-primary:hover {
+      background-color: #007bff !important;
+      color: #fff !important;
+  }
+  
+  /* Testimonios */
+  .text-primary {
+      color: #007bff !important; /* Azul */
+  }
+  
+  .bg-light {
+      background-color: #f8f9fa !important; /* Mantiene el fondo claro */
+  }
+  
+  .fa-quote-right.text-primary {
+      color: #007bff !important; /* Icono de comillas en azul */
+  }
+  
+  /* Footer */
+  .footer h1 span.text-primary {
+      color: #007bff !important; /* Parte del logo en azul */
+  }
+  
+  .btn-primary {
+      background-color: #007bff !important; /* Botones de redes sociales en azul */
+      border-color: #007bff !important;
+  }
+  
+  .btn-primary:hover {
+      background-color: #0056b3 !important; /* Azul más oscuro al pasar el mouse */
+      border-color: #0056b3 !important;
+  }
+  
+  .text-white-50 {
+      color: rgba(255, 255, 255, 0.5) !important; /* Mantiene enlaces en footer en su estilo */
+  }
+  
+  .input-group-append .btn-primary {
+      background-color: #007bff !important; /* Botón de suscripción en azul */
+      border-color: #007bff !important;
+  }
+  
+  .service-carousel .service-item img {
+      width: 100% !important;
+      height: 350px !important; /* Ajusta la altura según necesites */
+      object-fit: cover !important;
+  }
+  
+  .team img {
+      width: 100%; 
+      height: 300px; /* Ajusta la altura según necesites */
+      object-fit: cover; /* Recorta la imagen manteniendo la proporción */
+  }
+  
+  
+  
+  
+  
+  
